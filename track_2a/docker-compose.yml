@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    # Values come from the shell or from .env next to this file (both optional,
+    # so `make run` also starts on a fresh clone; /chat then returns 503).
+    environment:
+      LLM_NAME: ${LLM_NAME:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
