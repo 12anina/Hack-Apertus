@@ -1,0 +1,63 @@
+// Small inline icons (no icon library needed).
+
+type IconProps = { className?: string };
+
+const base = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 2.2,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  "aria-hidden": true,
+} as const;
+
+export function ArrowRight({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
+export function ChevronLeft({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M15 5l-7 7 7 7" />
+    </svg>
+  );
+}
+
+export function ChevronDown({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}
+
+export function Check({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg {...base} strokeWidth={3} className={className}>
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
+export function Speaker({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M4 10v4h4l5 4V6l-5 4H4z" />
+      <path d="M16.5 9a4.5 4.5 0 010 6" />
+    </svg>
+  );
+}
+
+export function Mic({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <rect x="9" y="3" width="6" height="11" rx="3" />
+      <path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21" />
+    </svg>
+  );
+}

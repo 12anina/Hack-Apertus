@@ -13,7 +13,8 @@ If something changes, change it here first, then in the code.
 
 | Topic | Rule |
 |---|---|
-| Base URL | `http://localhost:8080/api/v1` |
+| Base URL | `http://localhost:8000/api/v1` |
+| CORS | Allow origin `http://localhost:5173` (frontend dev server); Docker/nginx origin added later |
 | Format | JSON only, UTF-8, `Content-Type: application/json` |
 | Naming | `snake_case` for all keys |
 | IDs | Strings (UUID), never numbers |
@@ -260,3 +261,4 @@ Generated with one LLM call the first time, then cached.
 | Date | Change | By |
 |---|---|---|
 | 2026-10-06 | First draft | Iago |
+| 2026-10-06 | Port 8000 (matches backend skeleton), CORS for frontend dev server | Anina |
